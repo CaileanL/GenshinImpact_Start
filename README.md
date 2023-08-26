@@ -11,12 +11,13 @@
 - 检测屏幕白色像素比例(cv2)
 - 获取原神路径(原神没有把路径放入注册表，我通过获取快捷方式拼接的路径)
 - 将原神窗口置顶
+- 随后播放你想要的音乐（命名为start.mp3）
 
 <br/>
 
 ## 如何使用本源码
 
-### 从源码使用:
+### 从源码使用
 
 ```
 git clone https://github.com/YinBuLiao/GenshinImpact_Start.git
@@ -25,7 +26,7 @@ pip install requirements.txt
 python main.py(需要使用管理员权限运行)
 ```
 
-### 从release下载:
+### 从release下载
 
 - 将软件下载以后以管理员模式启动程序
 

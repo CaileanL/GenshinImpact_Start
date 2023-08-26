@@ -136,7 +136,8 @@ while True:
         #                       screen_width, screen_height, win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
 
         # 播放音乐
-        Play_mp3.play('./start.mp3')
+        if (os.path.exists('./start.mp3')):
+            Play_mp3.play('./start.mp3')
 
         win = pygetwindow.getWindowsWithTitle("原神")[0]
         # win.hide()

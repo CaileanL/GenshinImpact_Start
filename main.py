@@ -1,4 +1,3 @@
-import pygetwindow
 import os
 import subprocess
 import time
@@ -106,5 +105,4 @@ while True:
         print(time.gmtime())
         break
 
-# time.sleep(1)
 cv2.destroyWindow('Transition')

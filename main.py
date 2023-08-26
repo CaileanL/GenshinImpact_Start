@@ -94,7 +94,7 @@ def get_all_explorer_windows():
     def callback(hwnd, windows):
         window_text = win32gui.GetWindowText(hwnd)
         window_class = win32gui.GetClassName(hwnd)
-        # print(window_class, window_text)
+        print(window_class, window_text)
         if win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE) & win32con.WS_MAXIMIZE:
             windows.append((hwnd, window_text))
             # print("--------------added!")
@@ -117,36 +117,41 @@ while True:
         print("捕获！")
         print(time.gmtime())
 
-        for i in get_all_explorer_windows():
-            win32gui.ShowWindow(i[0], win32con.SW_MINIMIZE)
+        # for i in get_all_explorer_windows():
+        #     win32gui.ShowWindow(i[0], win32con.SW_MINIMIZE)
 
-        time.sleep(5)
+        # # 获取当前获得焦点的窗口句柄
+        # hwnd3 = win32gui.GetForegroundWindow()
+        # # 最小化那个窗口
+        # win32gui.ShowWindow(hwnd3, win32con.SW_MINIMIZE)
 
-        # 获取当前获得焦点的窗口句柄
-        hwnd3 = win32gui.GetForegroundWindow()
-        # 最小化那个窗口
-        win32gui.ShowWindow(hwnd3, win32con.SW_MINIMIZE)
-
-        # 关闭
-        cv2.destroyWindow('Transition')
         # 设置窗口置顶
         # win32gui.MoveWindow(hwnd2, 0, 0, screen_width, screen_height, True)
         # win32gui.ShowWindow(hwnd2, win32con.SW_MAXIMIZE)
         # win32gui.SetWindowPos(hwnd2, win32con.HWND_TOPMOST, 0, 0,
         #                       screen_width, screen_height, win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
 
+        # windows = pyautogui.getWindowsWithTitle("原神")
+        # window = windows[0]
+        # pyautogui.moveTo(window.left, window.top)
+
+        # win = pygetwindow.getWindowsWithTitle("原神")[0]
+        # # win.hide()
+        # win.show()
+        # win.maximize()
+        # win.activate()
+
+        win32gui.ShowWindow(hwnd2, win32con.SW_SHOWMAXIMIZED)
+
         # 播放音乐
+
+        time.sleep(2)
         if (os.path.exists('./start.mp3')):
             Play_mp3.play('./start.mp3')
-
-        win = pygetwindow.getWindowsWithTitle("原神")[0]
-        # win.hide()
-        win.show()
-        win.maximize()
-        win.activate()
 
         print("原神启动！！！")
         print(time.gmtime())
         break
 
 # time.sleep(1)
+cv2.destroyWindow('Transition')

@@ -94,10 +94,10 @@ def get_all_explorer_windows():
     def callback(hwnd, windows):
         window_text = win32gui.GetWindowText(hwnd)
         window_class = win32gui.GetClassName(hwnd)
-        print(window_class, window_text)
+        # print(window_class, window_text)
         if win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE) & win32con.WS_MAXIMIZE:
             windows.append((hwnd, window_text))
-            print("--------------added!")
+            # print("--------------added!")
 
     windows = []
     win32gui.EnumWindows(callback, windows)

@@ -3,3 +3,4 @@ pyautogui
 numpy
 subprocess
 pywin32
+Play_mp3

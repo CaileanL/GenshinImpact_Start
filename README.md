@@ -20,7 +20,7 @@
 ### 从源码使用
 
 ```
-git clone https://github.com/YinBuLiao/GenshinImpact_Start.git
+git clone https://github.com/CaileanL/GenshinImpact_Start.git
 cd GenshinImpact_Start
 pip install requirements.txt
 python main.py(需要使用管理员权限运行)
